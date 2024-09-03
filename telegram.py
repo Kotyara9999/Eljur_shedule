@@ -15,7 +15,6 @@ class teleHandler:
         :param caption: Описание.
         :return: None.
         """
-        if caption: logging.info(f"Добавляю в медиа: {caption}")
 
         self.media.append(InputMediaDocument(media=file,
                                              caption=caption,
@@ -29,7 +28,6 @@ class teleHandler:
         :param caption: Описание.
         :return: None.
         """
-        if caption: logging.info(f"Добавляю в медиа: {caption}")
         self.media.append(InputMediaPhoto(media=file,
                                           caption=caption,
                                           parse_mode='HTML'))
@@ -51,7 +49,6 @@ class teleHandler:
         :param text: Текст сообщения.
         :return: None.
         """
-        logging.info(f"Отправляю сообщение в тг: {text}")
         self.bot.send_message(send_id,
                               text,
                               message_thread_id=thread_id,
